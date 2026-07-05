@@ -32,6 +32,7 @@ body{
   font-family:var(--sans);line-height:1.6;
   -webkit-font-smoothing:antialiased;
 }
+p, li{text-align:justify;text-justify:inter-word;}
 .wrap{max-width:1160px;margin:0 auto;padding:0 32px;}
 img{max-width:100%;display:block;}
 a{color:inherit;text-decoration:none;}
@@ -135,6 +136,23 @@ section{padding:96px 0;}
 .service-card h3{font-size:1.12rem;margin-bottom:10px;}
 .service-card p{color:var(--ink-soft);font-size:0.9rem;margin:0;}
 
+/* ===== CERTIFICATIONS ===== */
+#certifications{background:var(--surface);}
+.cert-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;}
+.cert-card{
+  background:var(--bg);border-radius:20px;padding:28px 26px;border:1px solid var(--line);
+  display:flex;gap:18px;align-items:flex-start;
+  transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.cert-card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:transparent;}
+.cert-icon{
+  flex-shrink:0;width:46px;height:46px;border-radius:12px;background:var(--surface-2);
+  display:flex;align-items:center;justify-content:center;color:var(--sage-dark);
+}
+.cert-card h3{font-size:1.02rem;margin-bottom:6px;line-height:1.35;}
+.cert-org{font-family:var(--mono);font-size:0.76rem;color:var(--sage-dark);letter-spacing:0.03em;}
+.cert-date{font-family:var(--mono);font-size:0.76rem;color:var(--ink-soft);margin-top:4px;}
+
 /* ===== PROJECTS ===== */
 #projects{background:var(--surface);}
 .filter-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:40px;}
@@ -186,6 +204,7 @@ footer{padding:36px 0;}
   .hero-art{margin-top:40px;}
   .services-grid{grid-template-columns:repeat(2,1fr);}
   .projects-grid{grid-template-columns:1fr;}
+  .cert-grid{grid-template-columns:1fr;}
   .hero h1{font-size:2.3rem;}
   nav.links{display:none;}
   #contact{padding:56px 28px;border-radius:24px;}
@@ -205,6 +224,7 @@ footer{padding:36px 0;}
       <a href="#services">Services</a>
       <a href="#projects">Projects</a>
       <a href="#experience">Experience</a>
+      <a href="#certifications">Certifications</a>
       <a href="#contact">Contact</a>
     </nav>
     <div class="status-pill"><span class="dot"></span>Open to work</div>
@@ -340,7 +360,7 @@ footer{padding:36px 0;}
         <div class="project-info">
           <span class="project-tag">UI Design</span>
           <h3>Movie Database System</h3>
-          <p>CRUD-driven movie catalog with genre browsing, an A–Z index, and a ratings-sorted view for fast scanning.</p>
+          <p>A movie database where users can browse movies with ratings and synopses, sorted alphabetically (A–Z, Z–A) or by rating.</p>
           <a class="project-link" href="https://github.com/nadineb23" target="_blank" rel="noopener">View on GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></a>
         </div>
       </div>
@@ -385,6 +405,57 @@ footer{padding:36px 0;}
           <li>Performed accurate, high-volume data encoding with zero error tolerance.</li>
           <li>Maintained organized records under strict data confidentiality standards.</li>
         </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="certifications">
+  <div class="wrap">
+    <div class="section-head reveal" style="text-align:center;max-width:600px;margin:0 auto 56px;">
+      <div class="eyebrow" style="justify-content:center;">Certifications</div>
+      <h2>Continuous Learning</h2>
+    </div>
+    <div class="cert-grid">
+      <div class="cert-card reveal">
+        <div class="cert-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15a5 5 0 100-10 5 5 0 000 10z"/><path d="M8.5 13.5L7 22l5-3 5 3-1.5-8.5"/></svg></div>
+        <div>
+          <h3>Certificate of Commendation and Completion — On-the-Job Training</h3>
+          <div class="cert-org">International Relations Office, Bicol University</div>
+          <div class="cert-date">9 June – 1 August 2025</div>
+        </div>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 6 6 1-4.5 4 1 6L12 16l-5.5 3 1-6L3 9l6-1z"/></svg></div>
+        <div>
+          <h3>Oracle Database Programming with PL/SQL</h3>
+          <div class="cert-org">Koenig Solutions</div>
+          <div class="cert-date">21 April 2025</div>
+        </div>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 6 6 1-4.5 4 1 6L12 16l-5.5 3 1-6L3 9l6-1z"/></svg></div>
+        <div>
+          <h3>Hidden Gems in Flutter — Features You Didn't Know Existed</h3>
+          <div class="cert-org">Koenig Solutions</div>
+          <div class="cert-date">21 April 2025</div>
+        </div>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 6 6 1-4.5 4 1 6L12 16l-5.5 3 1-6L3 9l6-1z"/></svg></div>
+        <div>
+          <h3>Introduction to Machine Learning on AWS</h3>
+          <div class="cert-org">Koenig Solutions</div>
+          <div class="cert-date">21 April 2025</div>
+        </div>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 6 6 1-4.5 4 1 6L12 16l-5.5 3 1-6L3 9l6-1z"/></svg></div>
+        <div>
+          <h3>Creating Forms in Power Apps — Collect &amp; Store Data Easily</h3>
+          <div class="cert-org">Koenig Solutions</div>
+          <div class="cert-date">9 April 2025</div>
+        </div>
       </div>
     </div>
   </div>
